@@ -22,7 +22,7 @@ npm install -g neobytescore-node
 Neobytescore includes a Command Line Interface (CLI) for managing, configuring and interfacing with your Neobytescore Node.
 
 ```bash
-neobytescore-node create -d <dash-data-dir> mynode
+neobytescore-node create -d <neobytes-data-dir> mynode
 cd mynode
 neobytescore-node install <service>
 neobytescore-node install https://github.com/yourname/helloworld
