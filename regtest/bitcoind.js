@@ -7,7 +7,7 @@ var index = require('..');
 var log = index.log;
 
 var chai = require('chai');
-var bitcore = require('bitcore-lib-dash');
+var bitcore = require('neobytescore-lib');
 var BN = bitcore.crypto.BN;
 var async = require('async');
 var rimraf = require('rimraf');
@@ -17,7 +17,7 @@ var bitcoind;
 var should = chai.should();
 var assert = chai.assert;
 var sinon = require('sinon');
-var BitcoinRPC = require('bitcoind-rpc-dash');
+var BitcoinRPC = require('neobytesd-rpc');
 var transactionData = [];
 var blockHashes = [];
 var utxos;
@@ -46,7 +46,7 @@ describe('Bitcoind Functionality', function() {
       bitcoind = require('../').services.Bitcoin({
         spawn: {
           datadir: datadir,
-          exec: path.resolve(__dirname, process.env.HOME, './.bitcore/data/dashd')
+          exec: path.resolve(__dirname, process.env.HOME, './.bitcore/data/neobytesd')
         },
         node: {
           network: regtestNetwork,
@@ -60,10 +60,10 @@ describe('Bitcoind Functionality', function() {
         log.error('error="%s"', err.message);
       });
 
-      log.info('Waiting for Bitcoin Core to initialize...');
+      log.info('Waiting for Neobytes Core to initialize...');
 
       bitcoind.start(function() {
-        log.info('Bitcoind started');
+        log.info('Neobytesd started');
 
         client = new BitcoinRPC({
           protocol: 'http',

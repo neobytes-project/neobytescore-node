@@ -1,17 +1,17 @@
-Bitcore Node Dash
+Neobytescore Node
 ============
 
-A Dash full node for building applications and services with Node.js. A node is extensible and can be configured to run additional services. At the minimum a node has an interface to [Dash Core v0.12.1.x](https://github.com/dashpay/dash/tree/v0.12.1.x) for more advanced address queries. Additional services can be enabled to make a node more useful such as exposing new APIs, running a block explorer and wallet service.
+A Neobytes full node for building applications and services with Node.js. A node is extensible and can be configured to run additional services. At the minimum a node has an interface to [Neobytes Core v0.12.1.x](https://github.com/neobytes-project/neobytes/tree/v0.12.1.x) for more advanced address queries. Additional services can be enabled to make a node more useful such as exposing new APIs, running a block explorer and wallet service.
 
 ## Install
 
 ```bash
-npm install -g bitcore-node-dash
+npm install -g neobytescore-node
 ```
 
 ## Prerequisites
 
-- Dash Core (v0.12.1.x) with support for additional indexing *(see above)*
+- Neobytes Core (v0.12.1.x) with support for additional indexing *(see above)*
 - Node.js v0.10, v0.12, v4 or v5
 - ZeroMQ *(libzmq3-dev for Ubuntu/Debian or zeromq on OSX)*
 - ~20GB of disk storage
@@ -19,19 +19,17 @@ npm install -g bitcore-node-dash
 
 ## Configuration
 
-Bitcore includes a Command Line Interface (CLI) for managing, configuring and interfacing with your Bitcore Node.
+Neobytescore includes a Command Line Interface (CLI) for managing, configuring and interfacing with your Neobytescore Node.
 
 ```bash
-bitcore-node-dash create -d <dash-data-dir> mynode
+neobytescore-node create -d <dash-data-dir> mynode
 cd mynode
-bitcore-node-dash install <service>
-bitcore-node-dash install https://github.com/yourname/helloworld
-bitcore-node-dash start
+neobytescore-node install <service>
+neobytescore-node install https://github.com/yourname/helloworld
+neobytescore-node start
 ```
 
 This will create a directory with configuration files for your node and install the necessary dependencies.
-
-Please note that [Dash Core v0.12.1.x](https://github.com/dashpay/dash/tree/v0.12.1.x) will be downloaded automatically. Once completed the dashd binary should be placed into the &lt;dash-data-dir&gt; folder specified during node creation.
 
 For more information about (and developing) services, please see the [Service Documentation](docs/services.md).
 
@@ -39,9 +37,9 @@ For more information about (and developing) services, please see the [Service Do
 
 There are several add-on services available to extend the functionality of Bitcore:
 
-- [Insight API](https://github.com/dashpay/insight-api-dash/tree/master)
-- [Insight UI](https://github.com/dashpay/insight-ui-dash/tree/master)
-- [Bitcore Wallet Service](https://github.com/dashpay/bitcore-wallet-service/tree/master)
+- [Insight API](https://github.com/neobytes-project/insight-api-neobytes/tree/master)
+- [Insight UI](https://github.com/neobytes-project/insight-ui-neobytes/tree/master)
+- [Bitcore Wallet Service](https://github.com/neobytes-project/neobytescore-wallet-service/tree/master)
 
 ## Documentation
 
@@ -56,11 +54,11 @@ There are several add-on services available to extend the functionality of Bitco
 
 ## Contributing
 
-Please send pull requests for bug fixes, code optimization, and ideas for improvement. For more information on how to contribute, please refer to our [CONTRIBUTING](https://github.com/bitpay/bitcore/blob/master/CONTRIBUTING.md) file.
+Please send pull requests for bug fixes, code optimization, and ideas for improvement. For more information on how to contribute, please refer to our [CONTRIBUTING](https://github.com/neobytes-project/neobytescore/blob/master/CONTRIBUTING.md) file.
 
 ## License
 
-Code released under [the MIT license](https://github.com/bitpay/bitcore-node-dash/blob/master/LICENSE).
+Code released under [the MIT license](https://github.com/neobytes-project/neobytescore-node/blob/master/LICENSE).
 
 Copyright 2013-2015 BitPay, Inc.
 
